@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36121.58 d17.14
+VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryClasses", "LibraryClasses\LibraryClasses.csproj", "{2E69853A-192B-4773-A00A-2C44D12BB97F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryUI", "LibraryUI\LibraryUI.csproj", "{4F42E21A-5FCA-4EBD-ACDE-AF8C2EE39EA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{22E5167A-B8EC-41D4-96C2-472A55BE1A92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4F42E21A-5FCA-4EBD-ACDE-AF8C2EE39EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F42E21A-5FCA-4EBD-ACDE-AF8C2EE39EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F42E21A-5FCA-4EBD-ACDE-AF8C2EE39EA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E5167A-B8EC-41D4-96C2-472A55BE1A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E5167A-B8EC-41D4-96C2-472A55BE1A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E5167A-B8EC-41D4-96C2-472A55BE1A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E5167A-B8EC-41D4-96C2-472A55BE1A92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
