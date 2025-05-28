@@ -1,0 +1,83 @@
+﻿<Page x:Class="LibraryUI.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LibraryUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HomePage"
+      Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="VSU Library" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <Button x:Name="MyBooksButton" Content="My Books" Click="MyBooks_Click"/>
+                <Button x:Name="MyProfileButton" Content="My Profile" Click="MyProfile_Click"/>
+                <Button x:Name="LogoutButton" Content="Logout" Click="Logout_Click"/>
+            </StackPanel>
+
+            <Grid Grid.Column="1" Margin="5,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="12*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox x:Name="SearchTextBox" Grid.Column="0" BorderBrush="Black" BorderThickness="2" Margin="5,5,5,5"/>
+                    <Button x:Name="SearchButton" Grid.Column="1" Content="🔍" FontSize="30" Margin="2,2,2,2" Background="White" BorderBrush="White" Click="SearchButton_Click"/>
+                </Grid>
+
+                <DataGrid x:Name="BooksDataGrid" Grid.Row="1" ItemsSource="{Binding}" AutoGenerateColumns="False" 
+                         SelectionMode="Single" IsReadOnly="True" Margin="5"
+                         SelectionChanged="BookDataGrid_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Book Title" Binding="{Binding Title}" Width="4*"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <Button x:Name="BorrowButton" Grid.Row="2" Content="Borrow Book" 
+                        VerticalAlignment="Center" HorizontalAlignment="Right" 
+                        Padding="15,5" Margin="0,5,5,5"
+                        Click="BorrowButton_Click"/>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="7*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="Details" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
+                <StackPanel Grid.Row="1">
+                    <TextBlock x:Name="BookIDTextBlock" Text="Book ID: " Margin="5,5,5,5"/>
+                    <TextBlock x:Name="TitleTextBlock" Text="Title: " Margin="5,5,5,5"/>
+                    <TextBlock x:Name="AuthorTextBlock" Text="Author: " Margin="5,5,5,5"/>
+                    <TextBlock x:Name="PublisherTextBlock" Text="Publisher: " Margin="5,5,5,5"/>
+                    <TextBlock x:Name="YearPublishedTextBlock" Text="Year Published: " Margin="5,5,5,5"/>
+                    <TextBlock x:Name="StatusTextBlock" Text="Status: " Margin="5,5,5,5"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
